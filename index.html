@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>You Have Been Hacked</title>
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Estilo do corpo da página */
+    body {
+      background-color: black;
+      color: rgb(255, 136, 0);
+      font-family: 'Courier New', Courier, monospace;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* Container da mensagem */
+    .hacked-message {
+      text-align: center;
+      font-size: 2rem;
+    }
+
+    /* Efeito de digitação */
+    .typing-effect {
+      overflow: hidden;
+      border-right: 0.15em solid rgb(243, 243, 243);
+      white-space: nowrap;
+      margin: 0 auto;
+      letter-spacing: 0.15em;
+      animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+    }
+    .blink{
+        color: aliceblue;
+    }
+    /* Efeito de texto piscando */
+    .blink {
+      animation: blink 1s linear infinite;
+    }
+
+    @keyframes blink {
+      50% {
+        opacity: 0;
+      }
+    }
+
+    /* E
+    /* Animação de digitação */
+    @keyframes typing {
+      from {
+        width: 0;
+      }
+      to {
+        width: 100%;
+      }
+    }
+
+    /* Animação do cursor piscando */
+    @keyframes blink-caret {
+      from,
+      to {
+        border-color: transparent;
+      }
+      50% {
+        border-color: rgb(255, 238, 0);
+      }
+    }
+
+    /* Efeito de glitch */
+    .glitch {
+      position: relative;
+      animation: glitch 2s infinite;
+    }
+
+    .glitch::before,
+    .glitch::after {
+      content: attr(data-text);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .glitch::before {
+      left: 2px;
+      text-shadow: -2px 0 rgb(38, 234, 241);
+      animation: glitch-before 2s infinite;
+    }
+
+    .glitch::after {
+      left: -2px;
+      text-shadow: 2px 0 blue;
+      animation: glitch-after 2s infinite;
+    }
+
+    @keyframes glitch-before {
+      0% {
+        clip: rect(24px, 9999px, 64px, 0);
+      }
+      25% {
+        clip: rect(12px, 9999px, 44px, 0);
+      }
+      50% {
+        clip: rect(48px, 9999px, 32px, 0);
+      }
+      75% {
+        clip: rect(36px, 9999px, 88px, 0);
+      }
+      100% {
+        clip: rect(24px, 9999px, 64px, 0);
+      }
+    }
+
+    @keyframes glitch-after {
+      0% {
+        clip: rect(64px, 9999px, 24px, 0);
+      }
+      25% {
+        clip: rect(44px, 9999px, 12px, 0);
+      }
+      50% {
+        clip: rect(32px, 9999px, 48px, 0);
+      }
+      75% {
+        clip: rect(88px, 9999px, 36px, 0);
+      }
+      100% {
+        clip: rect(64px, 9999px, 24px, 0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="hacked-message">
+    <img src="cateyes.jpeg" alt="" width="500px">
+    <div class="typing-effect glitch" data-text="You Have Been Hacked!">
+      You Have Been Hacked!
+    </div>
+    <div class="blink">@cateyes</div>
+  </div>
+</body>
+</html>
