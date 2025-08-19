@@ -36,10 +36,4 @@ This HTML page was deployed in a **safe and authorized lab environment** as part
 
 ---
 
-## 🙋‍♀️ About Me
-
-I'm Julia Costa — offensive security student, CTF player, and aspiring red teamer.  
-I build practical simulations to train, educate, and explore ethical hacking techniques.
----
-
 <p align="center"><em>Simulate responsibly. Hack ethically.</em></p>
